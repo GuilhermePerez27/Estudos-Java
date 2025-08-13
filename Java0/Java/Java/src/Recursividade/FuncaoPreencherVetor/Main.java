@@ -5,16 +5,14 @@ public class Main {
     public static void main(String[] args) {
         // Variáveis
         Scanner scanner = new Scanner(System.in);
-        int n;
         int i = 0;
 
         //Inserção do tamanho do vetor
         System.out.println("Insira a quantidade de números que serão inseridos dentro do vetor");
-        n = scanner.nextInt();
         //Criação do Vetor
-        int[] vetor = new int[n];
+        int[] vetor = new int[scanner.nextInt()];
 
-        adicionarAoVetor(vetor , n, i, scanner);
+        adicionarAoVetor(vetor , i, scanner);
 
         System.out.println();
         System.out.println("Valores do vetor");
@@ -23,11 +21,11 @@ public class Main {
     }
 
     //Função recursiva que adiciona os valores inteiros do vetor
-    public static int adicionarAoVetor(int[] vetor, int n, int i, Scanner scanner) {
-        if (i<n) {
+    public static int adicionarAoVetor(int[] vetor, int i, Scanner scanner) {
+        if (i<vetor.length) {
             System.out.println("Insira um valor inteiro para a posição "+ i);
             vetor[i] = scanner.nextInt();
-            return adicionarAoVetor(vetor, n, i+1, scanner);
+            return adicionarAoVetor(vetor,i+1, scanner);
         } else {
             return 0;
         }
