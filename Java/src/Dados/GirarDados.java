@@ -61,7 +61,10 @@ public class GirarDados {
         int randomNum10 = random.nextInt(10);
         return randomNum10 + 1;
     }
-
+     public static int d12(Random random) {
+        int randomNum10 = random.nextInt(10);
+        return randomNum10 + 1;
+    }
     public static int d20(Random random) {
         int randomNum20 = random.nextInt(20);
         return randomNum20 + 1;
@@ -75,3 +78,4 @@ public class GirarDados {
 
 
 }
+
